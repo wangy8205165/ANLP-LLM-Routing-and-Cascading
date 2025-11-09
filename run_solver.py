@@ -11,10 +11,10 @@ import pandas as pd
 from concurrent.futures import ThreadPoolExecutor
 from functools import partial
 from tqdm import tqdm
-# from huggingface_hub import notebook_login
-# from transformers import AutoTokenizer, AutoModelForCausalLM
-# import transformers
-# import torch
+from huggingface_hub import notebook_login
+from transformers import AutoTokenizer, AutoModelForCausalLM
+import transformers
+import torch
 import os
 import argparse
 from prompt_template import dataset_prompts_and_instructions
@@ -128,7 +128,19 @@ def generate_with_llama3(prompt: str, max_new_tokens: int = MAX_NEW_TOKENS) -> s
 # ===========================
 
 from openai import OpenAI
-client = OpenAI()
+MAX_NEW_TOKENS = 300
+api_key = "your openai api token"
+client = OpenAI(api_key=api_key)
+
+def generate_with_gpt(prompt: str, model_name: str = "gpt-5",max_tokens: int = MAX_NEW_TOKENS) -> str:
+    response = client.responses.create(
+        model=model_name,
+        reasoning={"effort": "low"},
+        instructions="You are a helpful assistant.",
+        input=prompt,
+        # max_output_tokens = max_tokens
+    )
+    return response.output_text
 
 
 # ===========================
@@ -150,3 +162,15 @@ outputs = {}
 
 print("Running Llama-3 (small model)...")
 outputs["llama3_pred"] = run_solver_job(inputs,partial(generate_with_llama3),max_workers=2)
+
+print("Running ChatGPT (large model)...")
+inputs["gpt_pred"] = run_solver_job(inputs,partial(generate_with_gpt, model_name="gpt-5"),max_workers=8)
+
+# ===========================
+# Save the results
+# ===========================
+
+import json
+output_path = f"outputs/baseline_output_{args.dataset}.json"
+with open(output_path, "w", encoding="utf-8") as f:
+    json.dump(outputs, f, ensure_ascii=False, indent=4)
