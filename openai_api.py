@@ -1,5 +1,6 @@
 from openai import OpenAI
-api_key = "your api token"
+import os
+api_key = os.environ["OPENAI_API_KEY"]
 client = OpenAI(api_key=api_key)
 
 response = client.responses.create(

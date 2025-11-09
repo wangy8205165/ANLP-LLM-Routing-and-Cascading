@@ -130,7 +130,7 @@ def generate_with_llama3(prompt: str, max_new_tokens: int = MAX_NEW_TOKENS) -> s
 from openai import OpenAI
 MAX_NEW_TOKENS = 300
 api_key = "your openai api token"
-client = OpenAI(api_key=api_key)
+client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
 def generate_with_gpt(prompt: str, model_name: str = "gpt-5",max_tokens: int = MAX_NEW_TOKENS) -> str:
     response = client.responses.create(
