@@ -151,19 +151,19 @@ def eval_f1_dataset(name: str, pred_path: str, gold_path: str):
     golds = load_gold_outputs(gold_path)
     preds_dict = load_predictions(pred_path)
 
-    # llama_f1 = compute_average_f1(golds, preds_dict["llama3_pred"])
+    llama_f1 = compute_average_f1(golds, preds_dict["llama3_pred"])
     gpt_f1 = compute_average_f1(golds, preds_dict["gpt_pred"])
 
     print(f"=== {name} F1 ===")
-    # print(f"Llama3  F1: {llama_f1:.4f}")
+    print(f"Llama3  F1: {llama_f1:.4f}")
     print(f"GPT     F1: {gpt_f1:.4f}")
 
 if __name__ == "__main__":
     # 1) CNLI Accuracy
-    # eval_cnli(
-    #     pred_path="baseline_output_cnli.json",
-    #     gold_path="dataset/cnli.jsonl",
-    # )
+    eval_cnli(
+        pred_path="outputs/baseline_output_cnli_short.json",
+        gold_path="dataset/cnli_short.jsonl",
+    )
 
     # 2) QuALITY Accuracy
     # eval_quality(
@@ -172,11 +172,11 @@ if __name__ == "__main__":
     # )
 
     #3) CoQA F1
-    eval_f1_dataset(
-        name="CoQA",
-        pred_path="baseline_output_coqa.json",
-        gold_path="dataset/coqa.jsonl",
-    )
+    # eval_f1_dataset(
+    #     name="CoQA",
+    #     pred_path="outputs/baseline_output_coqa_short.json",
+    #     gold_path="dataset/coqa_short.jsonl",
+    # )
 
     # 4) QASPER F1
     # eval_f1_dataset(
