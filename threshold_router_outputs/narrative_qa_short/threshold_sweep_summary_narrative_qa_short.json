@@ -1,0 +1,47 @@
+[
+  {
+    "threshold": 0.25,
+    "total": 1000,
+    "lm1_count": 534,
+    "lm2_count": 466,
+    "lm1_ratio": 0.534,
+    "lm2_ratio": 0.466,
+    "avg_perf": 0.2679113164092,
+    "avg_perf_slm": 0.2039334014117,
+    "avg_perf_llm": 0.3352230200269,
+    "avg_cost": 14.32,
+    "total_cost": 14320.0,
+    "IBC": 0.0068645831542382,
+    "delta_IBC": 4.571606295205649
+  },
+  {
+    "threshold": 0.5,
+    "total": 1000,
+    "lm1_count": 492,
+    "lm2_count": 508,
+    "lm1_ratio": 0.492,
+    "lm2_ratio": 0.508,
+    "avg_perf": 0.272844880912,
+    "avg_perf_slm": 0.2039334014117,
+    "avg_perf_llm": 0.3352230200269,
+    "avg_cost": 15.16,
+    "total_cost": 15160.0,
+    "IBC": 0.006782625935068897,
+    "delta_IBC": 3.3231112499193425
+  },
+  {
+    "threshold": 0.75,
+    "total": 1000,
+    "lm1_count": 446,
+    "lm2_count": 554,
+    "lm1_ratio": 0.446,
+    "lm2_ratio": 0.554,
+    "avg_perf": 0.2802360979827,
+    "avg_perf_slm": 0.2039334014117,
+    "avg_perf_llm": 0.3352230200269,
+    "avg_cost": 16.08,
+    "total_cost": 16080.0,
+    "IBC": 0.00688652496128159,
+    "delta_IBC": 4.905856745086223
+  }
+]
