@@ -6,6 +6,7 @@ This project aims to compute the metrics for different datasets
 # Import all required libraries
 #================================
 import json
+import numpy as np
 import pandas as pd
 import re
 import string
@@ -142,7 +143,8 @@ def f1_score(pred: str, gold: str) -> float:
 def compute_average_f1(golds: List[str], preds: List[str]) -> float:
     assert len(golds) == len(preds), "gold and pred length mismatch"
     scores = [f1_score(p, g) for g, p in zip(golds, preds)]
-    return sum(scores) / len(scores) if scores else 0.0
+    # return sum(scores) / len(scores) if scores else 0.0
+    return np.mean(scores), np.var(scores)
 
 def eval_f1_dataset(name: str, pred_path: str, gold_path: str):
     """
@@ -151,19 +153,19 @@ def eval_f1_dataset(name: str, pred_path: str, gold_path: str):
     golds = load_gold_outputs(gold_path)
     preds_dict = load_predictions(pred_path)
 
-    llama_f1 = compute_average_f1(golds, preds_dict["llama3_pred"])
-    gpt_f1 = compute_average_f1(golds, preds_dict["gpt_pred"])
+    llama_f1_mean, llama_f1_var = compute_average_f1(golds, preds_dict["llama3_pred"])
+    gpt_f1_mean, gpt_f1_var = compute_average_f1(golds, preds_dict["gpt_pred"])
 
     print(f"=== {name} F1 ===")
-    print(f"Llama3  F1: {llama_f1:.4f}")
-    print(f"GPT     F1: {gpt_f1:.4f}")
+    print(f"Llama3  F1 Mean: {llama_f1_mean:.4f}, Var: {llama_f1_var:.4f}")
+    print(f"GPT     F1 Mean: {gpt_f1_mean:.4f}, Var: {gpt_f1_var:.4f}")
 
 if __name__ == "__main__":
     # 1) CNLI Accuracy
-    eval_cnli(
-        pred_path="outputs/baseline_output_cnli_short.json",
-        gold_path="dataset/cnli_short.jsonl",
-    )
+    # eval_cnli(
+    #     pred_path="outputs/baseline_output_cnli_short.json",
+    #     gold_path="dataset/cnli_short.jsonl",
+    # )
 
     # 2) QuALITY Accuracy
     # eval_quality(
@@ -171,7 +173,7 @@ if __name__ == "__main__":
     #     gold_path="dataset/quality.jsonl",
     # )
 
-    #3) CoQA F1
+    # 3) CoQA F1
     # eval_f1_dataset(
     #     name="CoQA",
     #     pred_path="outputs/baseline_output_coqa_short.json",
@@ -181,13 +183,13 @@ if __name__ == "__main__":
     # 4) QASPER F1
     # eval_f1_dataset(
     #     name="QASPER",
-    #     pred_path="baseline_output_qasper.json",
-    #     gold_path="dataset/qasper.jsonl",
+    #     pred_path="outputs/baseline_output_qasper_short.json",
+    #     gold_path="dataset/qasper_short.jsonl",
     # )
 
     # 5) NarrativeQA F1
-    # eval_f1_dataset(
-    #     name="NarrativeQA",
-    #     pred_path="baseline_output_narrativeqa.json",
-    #     gold_path="dataset/narrativeqa.jsonl",
-    # )
+    eval_f1_dataset(
+        name="NarrativeQA",
+        pred_path="outputs/baseline_output_narrative_qa_short.json",
+        gold_path="dataset/narrative_qa_short.jsonl",
+    )
