@@ -23,12 +23,20 @@ def apply_router(dataset: str):
     df = pd.read_json(router_data_path, lines=True, orient="records")
 
     results = []
+    total_cost = 0
     for i, row in df.iterrows():
         v = float(row["slm_confidence"])
         v_key = min(policy.keys(), key=lambda x: abs(x - v))
         action = policy[v_key]
-        final_ans = row["slm_pred"] if action == "keep" else row["llm_pred"]
 
+        if action == "keep":
+            final_ans = row["slm_pred"]
+            cost = 5
+        else:
+            final_ans = row["llm_pred"]
+            cost = 25
+
+        # final_ans = row["slm_pred"] if action == "keep" else row["llm_pred"]
         results.append({
             "id": row.get("id", i),
             "dataset": row.get("dataset", name),
@@ -37,6 +45,9 @@ def apply_router(dataset: str):
             "gold_answer":row.get("gold_output"),
             "final_answer": final_ans
         })
+        total_cost += cost
+    avg_cost = total_cost/1000
+    print(f"average cost:{avg_cost}")
 
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
