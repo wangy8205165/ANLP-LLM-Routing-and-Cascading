@@ -30,6 +30,8 @@ def compute_perf(dataset, golds, finals):
 def compute_IBC(pm,pslm,pllm,cm,cslm = 5,cllm = 25):
     ibc_m = (pm-pslm)/(cm-cslm)
     ibc_base = (pllm-pslm)/(cllm-cslm)
+    # print(f"ibc_m is {ibc_m}")
+    # print(f"ibc_base is {ibc_base}")
     delta_ibc = ((ibc_m-ibc_base)/(ibc_base))*100
     return delta_ibc
 
@@ -38,7 +40,7 @@ def compute_IBC(pm,pslm,pllm,cm,cslm = 5,cllm = 25):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset",type=str,required=True,help="Enter the dataset")
-    parser.add_argument("--cost",type=int,required=True,help="Enter the cost")
+    parser.add_argument("--cost",type=float,required=True,help="Enter the cost")
 
     args = parser.parse_args()
     dataset = args.dataset
@@ -58,7 +60,7 @@ def main():
         
         if args.dataset == "coqa_short":
             delta_ibc = compute_IBC(mean,0.4624,0.5939,args.cost)
-        elif args.datset == "narrative_qa_short":
+        elif args.dataset == "narrative_qa_short":
             delta_ibc = compute_IBC(mean,0.3019,0.3853,args.cost)
         elif args.dataset == "qasper_short":
             delta_ibc = compute_IBC(mean, 0.2039,0.3352,args.cost)
