@@ -1,20 +1,16 @@
-import transformers
-import torch
-from huggingface_hub import notebook_login
-import os
 # ===========================
 # Import required libraries
 # ===========================
-
+import transformers
+import torch.nn.functional as F
+import torch
+from huggingface_hub import notebook_login
+import os
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor
 from functools import partial
 from tqdm import tqdm
-from huggingface_hub import notebook_login
 from transformers import AutoTokenizer, AutoModelForCausalLM
-import transformers
-import torch
-import os
 import argparse
 from prompt_template import dataset_prompts_and_instructions
 
@@ -57,23 +53,6 @@ def normalize_dataset_name(name: str) -> str:
         "quality": "quality",
     }
     key = ''.join(ch for ch in name_lower if ch.isalpha() or ch == '_')
-    return mapping.get(key, key)
-
-# ===========================
-# Load the local llama 3 model
-# ===========================
-
-# Build the pipeline
-def build_llm_pipeline(model_id=MODEL_ID, device=DEVICE):
-    pipeline = transformers.pipeline(
-        "text-generation",
-        model=model_id,
-        model_kwargs={"torch_dtype": torch.bfloat16},
-        device_map="auto",
-    )
-    return pipeline
-llama3_pipeline = build_llm_pipeline(MODEL_ID, DEVICE)
-
 # ===========================
 # Construct prompt
 # ===========================
@@ -87,25 +66,27 @@ def build_prompt(row) -> str:
         instruction=cfg["instruction"],
         question=row["question"],
     )
-    return full_prompt
 
 # ===========================
-# Llama-3 inference
+# Build the model
 # ===========================
 
-def generate_with_llama3(prompt: str, max_new_tokens: int = MAX_NEW_TOKENS) -> str:
-    messages = [
+tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
+model = AutoModelForCausalLM.from_pretrained(
+    MODEL_ID,
+    torch_dtype=torch.bfloat16,
+    device_map="auto",
+)
+
+# ===================================================
+# Generate output and compute logits, entropies
+# ===================================================
+def generate_with_llama3(prompt: str) -> str:
+  messages = [
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": prompt},
     ]
-
-    outputs = llama3_pipeline(
-        messages,
-        max_new_tokens=max_new_tokens,
-        # temperature=temperature,
-    )
-    text = outputs[0]["generated_text"][-1]["content"]
-    return text.strip()
+    # TODO: Generate output and compute logits, entropies
 
 # ===========================
 # Concurrent running
@@ -120,7 +101,7 @@ def run_solver_job(df, engine_func, max_workers: int = 4):
     return results
 
 # ===========================
-# Run SLM and LLM baseline
+# Run SLM
 # ===========================
 outputs = {}
 
