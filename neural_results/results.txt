@@ -1,0 +1,64 @@
+p = 0.1
+=== Summary ===
+cnli_short: final_acc=0.7720, router_decision_acc=0.3440, slm_only_acc=0.5810, llm_only_acc=0.7630, avg_cost=19.03
+coqa_short: final_acc=0.5934, router_decision_acc=0.3510, slm_only_acc=0.4904, llm_only_acc=0.5939, avg_cost=19.85
+qasper_short: final_acc=0.3913, router_decision_acc=0.3210, slm_only_acc=0.3632, llm_only_acc=0.3853, avg_cost=19.66
+narrative_qa_short: final_acc=0.3352, router_decision_acc=0.4320, slm_only_acc=0.2134, llm_only_acc=0.3352, avg_cost=19.96
+
+p = 0.2
+=== Summary ===
+cnli_short: final_acc=0.7670, router_decision_acc=0.4710, slm_only_acc=0.5810, llm_only_acc=0.7630, avg_cost=15.48
+coqa_short: final_acc=0.5936, router_decision_acc=0.4600, slm_only_acc=0.4904, llm_only_acc=0.5939, avg_cost=16.98
+qasper_short: final_acc=0.3933, router_decision_acc=0.3380, slm_only_acc=0.3632, llm_only_acc=0.3853, avg_cost=19.30
+narrative_qa_short: final_acc=0.3302, router_decision_acc=0.4880, slm_only_acc=0.2134, llm_only_acc=0.3352, avg_cost=18.25
+
+p=0.3
+=== Summary ===
+cnli_short: final_acc=0.7510, router_decision_acc=0.5640, slm_only_acc=0.5810, llm_only_acc=0.7630, avg_cost=12.15
+coqa_short: final_acc=0.5888, router_decision_acc=0.5560, slm_only_acc=0.4904, llm_only_acc=0.5939, avg_cost=13.52
+qasper_short: final_acc=0.3899, router_decision_acc=0.4640, slm_only_acc=0.3632, llm_only_acc=0.3853, avg_cost=15.08
+narrative_qa_short: final_acc=0.3201, router_decision_acc=0.5400, slm_only_acc=0.2134, llm_only_acc=0.3352, avg_cost=15.97
+
+p=0.4
+=== Summary ===
+cnli_short: final_acc=0.6560, router_decision_acc=0.6770, slm_only_acc=0.5810, llm_only_acc=0.7630, avg_cost=5.26
+coqa_short: final_acc=0.5607, router_decision_acc=0.6280, slm_only_acc=0.4904, llm_only_acc=0.5939, avg_cost=7.97
+qasper_short: final_acc=0.3717, router_decision_acc=0.6710, slm_only_acc=0.3632, llm_only_acc=0.3853, avg_cost=2.94
+narrative_qa_short: final_acc=0.3059, router_decision_acc=0.5650, slm_only_acc=0.2134, llm_only_acc=0.3352, avg_cost=13.60
+
+p = 0.5
+=== Summary ===
+cnli_short: final_acc=0.5810, router_decision_acc=0.7030, slm_only_acc=0.5810, llm_only_acc=0.7630, avg_cost=1.00
+coqa_short: final_acc=0.4959, router_decision_acc=0.6550, slm_only_acc=0.4904, llm_only_acc=0.5939, avg_cost=1.38
+qasper_short: final_acc=0.3632, router_decision_acc=0.6970, slm_only_acc=0.3632, llm_only_acc=0.3853, avg_cost=1.00
+narrative_qa_short: final_acc=0.2732, router_decision_acc=0.5960, slm_only_acc=0.2134, llm_only_acc=0.3352, avg_cost=7.80
+
+p=0.6
+=== Summary ===
+cnli_short: final_acc=0.5810, router_decision_acc=0.7030, slm_only_acc=0.5810, llm_only_acc=0.7630, avg_cost=1.00
+coqa_short: final_acc=0.4904, router_decision_acc=0.6530, slm_only_acc=0.4904, llm_only_acc=0.5939, avg_cost=1.00
+qasper_short: final_acc=0.3632, router_decision_acc=0.6970, slm_only_acc=0.3632, llm_only_acc=0.3853, avg_cost=1.00
+narrative_qa_short: final_acc=0.2139, router_decision_acc=0.5710, slm_only_acc=0.2134, llm_only_acc=0.3352, avg_cost=1.02
+
+p=0.7
+=== Summary ===
+cnli_short: final_acc=0.5810, router_decision_acc=0.7030, slm_only_acc=0.5810, llm_only_acc=0.7630, avg_cost=1.00
+coqa_short: final_acc=0.4904, router_decision_acc=0.6530, slm_only_acc=0.4904, llm_only_acc=0.5939, avg_cost=1.00
+qasper_short: final_acc=0.3632, router_decision_acc=0.6970, slm_only_acc=0.3632, llm_only_acc=0.3853, avg_cost=1.00
+narrative_qa_short: final_acc=0.2134, router_decision_acc=0.5700, slm_only_acc=0.2134, llm_only_acc=0.3352, avg_cost=1.00
+
+p=0.8
+=== Summary ===
+cnli_short: final_acc=0.5810, router_decision_acc=0.7030, slm_only_acc=0.5810, llm_only_acc=0.7630, avg_cost=1.00
+coqa_short: final_acc=0.4904, router_decision_acc=0.6530, slm_only_acc=0.4904, llm_only_acc=0.5939, avg_cost=1.00
+qasper_short: final_acc=0.3632, router_decision_acc=0.6970, slm_only_acc=0.3632, llm_only_acc=0.3853, avg_cost=1.00
+narrative_qa_short: final_acc=0.2134, router_decision_acc=0.5700, slm_only_acc=0.2134, llm_only_acc=0.3352, avg_cost=1.00
+
+p=0.9
+=== Summary ===
+cnli_short: final_acc=0.5810, router_decision_acc=0.7030, slm_only_acc=0.5810, llm_only_acc=0.7630, avg_cost=1.00
+coqa_short: final_acc=0.4904, router_decision_acc=0.6530, slm_only_acc=0.4904, llm_only_acc=0.5939, avg_cost=1.00
+qasper_short: final_acc=0.3632, router_decision_acc=0.6970, slm_only_acc=0.3632, llm_only_acc=0.3853, avg_cost=1.00
+narrative_qa_short: final_acc=0.2134, router_decision_acc=0.5700, slm_only_acc=0.2134, llm_only_acc=0.3352, avg_cost=1.00
+
+
