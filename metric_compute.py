@@ -143,8 +143,8 @@ def f1_score(pred: str, gold: str) -> float:
 def compute_average_f1(golds: List[str], preds: List[str]) -> float:
     assert len(golds) == len(preds), "gold and pred length mismatch"
     scores = [f1_score(p, g) for g, p in zip(golds, preds)]
-    # return sum(scores) / len(scores) if scores else 0.0
-    return np.mean(scores), np.var(scores)
+    return sum(scores) / len(scores) if scores else 0.0
+    # return np.mean(scores), np.var(scores)
 
 def eval_f1_dataset(name: str, pred_path: str, gold_path: str):
     """
