@@ -1,0 +1,1117 @@
+Ratio = 10
+
+=== Dataset: cnli_short ===
+Loading data from ./neural_data\cnli_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.8165, R(route)=0.5629
+  s=1: R(keep)=-0.0100, R(route)=0.9000
+Computed threshold tau = 0.2179, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.2970
+  Decision F1 (positive=route where LLM better): 0.4580
+  Final task accuracy (chosen slm/llm score):   0.7630
+  Average cost (1 for SLM, 10 for LLM):         10.00
+Baselines:
+  Always SLM: acc=0.5810, avg_cost=1.00
+  Always LLM: acc=0.7630, avg_cost=10.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [6.5500307  2.33954004 1.62164903]
+    b' = -0.8893
+  Policy: route if p > 0.2179, otherwise keep.
+
+=== Dataset: coqa_short ===
+Loading data from ./neural_data\coqa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.5831, R(route)=0.3866
+  s=1: R(keep)=0.2872, R(route)=0.6958
+Computed threshold tau = 0.3247, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.3470
+  Decision F1 (positive=route where LLM better): 0.5152
+  Final task accuracy (chosen slm/llm score):   0.5939
+  Average cost (1 for SLM, 10 for LLM):         10.00
+Baselines:
+  Always SLM: acc=0.4904, avg_cost=1.00
+  Always LLM: acc=0.5939, avg_cost=10.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-2.13381955 -0.0780217  -0.05408071]
+    b' = -0.3835
+  Policy: route if p > 0.3247, otherwise keep.
+
+=== Dataset: qasper_short ===
+Loading data from ./neural_data\qasper_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.4158, R(route)=0.1930
+  s=1: R(keep)=0.2092, R(route)=0.4976
+Computed threshold tau = 0.4358, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.3360
+  Decision F1 (positive=route where LLM better): 0.4747
+  Final task accuracy (chosen slm/llm score):   0.3918
+  Average cost (1 for SLM, 10 for LLM):         9.65
+Baselines:
+  Always SLM: acc=0.3632, avg_cost=1.00
+  Always LLM: acc=0.3853, avg_cost=10.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [3.77543969 0.9201241  0.63778323]
+    b' = -0.0831
+  Policy: route if p > 0.4358, otherwise keep.
+
+=== Dataset: narrative_qa_short ===
+Loading data from ./neural_data\narrative_qa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.2632, R(route)=0.1061
+  s=1: R(keep)=0.1243, R(route)=0.4064
+Computed threshold tau = 0.3576, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.4300
+  Decision F1 (positive=route where LLM better): 0.6014
+  Final task accuracy (chosen slm/llm score):   0.3352
+  Average cost (1 for SLM, 10 for LLM):         10.00
+Baselines:
+  Always SLM: acc=0.2134, avg_cost=1.00
+  Always LLM: acc=0.3352, avg_cost=10.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-3.0745012  -0.4254494  -0.29489899]
+    b' = -0.3863
+  Policy: route if p > 0.3576, otherwise keep.
+
+=== Summary over datasets ===
+cnli_short: decision_acc=0.2970, decision_f1=0.4580, final_task_acc=0.7630, avg_cost=10.00
+coqa_short: decision_acc=0.3470, decision_f1=0.5152, final_task_acc=0.5939, avg_cost=10.00
+qasper_short: decision_acc=0.3360, decision_f1=0.4747, final_task_acc=0.3918, avg_cost=9.65
+narrative_qa_short: decision_acc=0.4300, decision_f1=0.6014, final_task_acc=0.3352, avg_cost=10.00
+
+
+Ratio = 20
+
+=== Dataset: cnli_short ===
+Loading data from ./neural_data\cnli_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.8165, R(route)=0.4629
+  s=1: R(keep)=-0.0100, R(route)=0.8000
+Computed threshold tau = 0.3039, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.2970
+  Decision F1 (positive=route where LLM better): 0.4580
+  Final task accuracy (chosen slm/llm score):   0.7630
+  Average cost (1 for SLM, 20 for LLM):         20.00
+Baselines:
+  Always SLM: acc=0.5810, avg_cost=1.00
+  Always LLM: acc=0.7630, avg_cost=20.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [6.5500307  2.33954004 1.62164903]
+    b' = -0.8893
+  Policy: route if p > 0.3039, otherwise keep.
+
+=== Dataset: coqa_short ===
+Loading data from ./neural_data\coqa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.5831, R(route)=0.2866
+  s=1: R(keep)=0.2872, R(route)=0.5958
+Computed threshold tau = 0.4900, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.5710
+  Decision F1 (positive=route where LLM better): 0.4723
+  Final task accuracy (chosen slm/llm score):   0.5666
+  Average cost (1 for SLM, 20 for LLM):         9.85
+Baselines:
+  Always SLM: acc=0.4904, avg_cost=1.00
+  Always LLM: acc=0.5939, avg_cost=20.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-2.13381955 -0.0780217  -0.05408071]
+    b' = -0.3835
+  Policy: route if p > 0.4900, otherwise keep.
+
+=== Dataset: qasper_short ===
+Loading data from ./neural_data\qasper_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.4158, R(route)=0.0930
+  s=1: R(keep)=0.2092, R(route)=0.3976
+Computed threshold tau = 0.6315, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6980
+  Decision F1 (positive=route where LLM better): 0.0066
+  Final task accuracy (chosen slm/llm score):   0.3634
+  Average cost (1 for SLM, 20 for LLM):         1.02
+Baselines:
+  Always SLM: acc=0.3632, avg_cost=1.00
+  Always LLM: acc=0.3853, avg_cost=20.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [3.77543969 0.9201241  0.63778323]
+    b' = -0.0831
+  Policy: route if p > 0.6315, otherwise keep.
+
+=== Dataset: narrative_qa_short ===
+Loading data from ./neural_data\narrative_qa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.2632, R(route)=0.0061
+  s=1: R(keep)=0.1243, R(route)=0.3064
+Computed threshold tau = 0.5854, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.5550
+  Decision F1 (positive=route where LLM better): 0.1620
+  Final task accuracy (chosen slm/llm score):   0.2248
+  Average cost (1 for SLM, 20 for LLM):         2.92
+Baselines:
+  Always SLM: acc=0.2134, avg_cost=1.00
+  Always LLM: acc=0.3352, avg_cost=20.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-3.0745012  -0.4254494  -0.29489899]
+    b' = -0.3863
+  Policy: route if p > 0.5854, otherwise keep.
+
+=== Summary over datasets ===
+cnli_short: decision_acc=0.2970, decision_f1=0.4580, final_task_acc=0.7630, avg_cost=20.00
+coqa_short: decision_acc=0.5710, decision_f1=0.4723, final_task_acc=0.5666, avg_cost=9.85
+qasper_short: decision_acc=0.6980, decision_f1=0.0066, final_task_acc=0.3634, avg_cost=1.02
+narrative_qa_short: decision_acc=0.5550, decision_f1=0.1620, final_task_acc=0.2248, avg_cost=2.92
+
+
+Ratio = 30
+
+=== Dataset: cnli_short ===
+Loading data from ./neural_data\cnli_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.8165, R(route)=0.5629
+  s=1: R(keep)=-0.0100, R(route)=0.9000
+Computed threshold tau = 0.2179, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.2970
+  Decision F1 (positive=route where LLM better): 0.4580
+  Final task accuracy (chosen slm/llm score):   0.7630
+  Average cost (1 for SLM, 10 for LLM):         10.00
+Baselines:
+  Always SLM: acc=0.5810, avg_cost=1.00
+  Always LLM: acc=0.7630, avg_cost=10.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [6.5500307  2.33954004 1.62164903]
+    b' = -0.8893
+  Policy: route if p > 0.2179, otherwise keep.
+
+=== Dataset: coqa_short ===
+Loading data from ./neural_data\coqa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.5831, R(route)=0.3866
+  s=1: R(keep)=0.2872, R(route)=0.6958
+Computed threshold tau = 0.3247, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.3470
+  Decision F1 (positive=route where LLM better): 0.5152
+  Final task accuracy (chosen slm/llm score):   0.5939
+  Average cost (1 for SLM, 10 for LLM):         10.00
+Baselines:
+  Always SLM: acc=0.4904, avg_cost=1.00
+  Always LLM: acc=0.5939, avg_cost=10.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-2.13381955 -0.0780217  -0.05408071]
+    b' = -0.3835
+  Policy: route if p > 0.3247, otherwise keep.
+
+=== Dataset: qasper_short ===
+Loading data from ./neural_data\qasper_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.4158, R(route)=0.1930
+  s=1: R(keep)=0.2092, R(route)=0.4976
+Computed threshold tau = 0.4358, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.3360
+  Decision F1 (positive=route where LLM better): 0.4747
+  Final task accuracy (chosen slm/llm score):   0.3918
+  Average cost (1 for SLM, 10 for LLM):         9.65
+Baselines:
+  Always SLM: acc=0.3632, avg_cost=1.00
+  Always LLM: acc=0.3853, avg_cost=10.00
+
+Analytical policy:
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [3.77543969 0.9201241  0.63778323]
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [3.77543969 0.9201241  0.63778323]
+    b' = -0.0831
+  Policy: route if p > 0.4358, otherwise keep.
+
+=== Dataset: narrative_qa_short ===
+Loading data from ./neural_data\narrative_qa_short_neural.jsonl
+Loading data from ./neural_data\narrative_qa_short_neural.jsonl
+Number of examples: 1000
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.2632, R(route)=0.1061
+  s=1: R(keep)=0.1243, R(route)=0.4064
+  s=1: R(keep)=0.1243, R(route)=0.4064
+Computed threshold tau = 0.3576, compare with '>'
+Policy metrics on full dataset:
+Computed threshold tau = 0.3576, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.4300
+  Decision F1 (positive=route where LLM better): 0.6014
+  Decision F1 (positive=route where LLM better): 0.6014
+  Final task accuracy (chosen slm/llm score):   0.3352
+  Average cost (1 for SLM, 10 for LLM):         10.00
+Baselines:
+  Final task accuracy (chosen slm/llm score):   0.3352
+  Average cost (1 for SLM, 10 for LLM):         10.00
+Baselines:
+  Average cost (1 for SLM, 10 for LLM):         10.00
+Baselines:
+Baselines:
+  Always SLM: acc=0.2134, avg_cost=1.00
+  Always SLM: acc=0.2134, avg_cost=1.00
+  Always LLM: acc=0.3352, avg_cost=10.00
+  Always LLM: acc=0.3352, avg_cost=10.00
+
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-3.0745012  -0.4254494  -0.29489899]
+    b' = -0.3863
+  Policy: route if p > 0.3576, otherwise keep.
+
+=== Summary over datasets ===
+cnli_short: decision_acc=0.2970, decision_f1=0.4580, final_task_acc=0.7630, avg_cost=10.00
+coqa_short: decision_acc=0.3470, decision_f1=0.5152, final_task_acc=0.5939, avg_cost=10.00
+qasper_short: decision_acc=0.3360, decision_f1=0.4747, final_task_acc=0.3918, avg_cost=9.65
+narrative_qa_short: decision_acc=0.4300, decision_f1=0.6014, final_task_acc=0.3352, avg_cost=10.00
+(rag) PS E:\CMU\2025_Fall\11711_Advanced_NLP\Project\ANLP-LLM-Routing-and-Cascading> python .\pomdp_logits.py
+
+=== Dataset: cnli_short ===
+Loading data from ./neural_data\cnli_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.8165, R(route)=0.3629
+  s=1: R(keep)=-0.0100, R(route)=0.7000
+Computed threshold tau = 0.3898, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.3620
+  Decision F1 (positive=route where LLM better): 0.4788
+  Final task accuracy (chosen slm/llm score):   0.7720
+  Average cost (1 for SLM, 30 for LLM):         27.88
+Baselines:
+  Always SLM: acc=0.5810, avg_cost=1.00
+  Always LLM: acc=0.7630, avg_cost=30.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [6.5500307  2.33954004 1.62164903]
+    b' = -0.8893
+  Policy: route if p > 0.3898, otherwise keep.
+
+=== Dataset: coqa_short ===
+Loading data from ./neural_data\coqa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.5831, R(route)=0.1866
+  s=1: R(keep)=0.2872, R(route)=0.4958
+Computed threshold tau = 0.6553, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6460
+  Decision F1 (positive=route where LLM better): 0.0585
+  Final task accuracy (chosen slm/llm score):   0.4976
+  Average cost (1 for SLM, 30 for LLM):         1.84
+Baselines:
+  Always SLM: acc=0.4904, avg_cost=1.00
+  Always LLM: acc=0.5939, avg_cost=30.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-2.13381955 -0.0780217  -0.05408071]
+    b' = -0.3835
+  Policy: route if p > 0.6553, otherwise keep.
+
+=== Dataset: qasper_short ===
+Loading data from ./neural_data\qasper_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.4158, R(route)=-0.0070
+  s=1: R(keep)=0.2092, R(route)=0.2976
+Computed threshold tau = 0.8271, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6970
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.3632
+  Average cost (1 for SLM, 30 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.3632, avg_cost=1.00
+  Always LLM: acc=0.3853, avg_cost=30.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [3.77543969 0.9201241  0.63778323]
+    b' = -0.0831
+  Policy: route if p > 0.8271, otherwise keep.
+
+=== Dataset: narrative_qa_short ===
+Loading data from ./neural_data\narrative_qa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.2632, R(route)=-0.0939
+  s=1: R(keep)=0.1243, R(route)=0.2064
+Computed threshold tau = 0.8131, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.5700
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.2134
+  Average cost (1 for SLM, 30 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.2134, avg_cost=1.00
+  Always LLM: acc=0.3352, avg_cost=30.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-3.0745012  -0.4254494  -0.29489899]
+    b' = -0.3863
+  Policy: route if p > 0.8131, otherwise keep.
+
+=== Summary over datasets ===
+cnli_short: decision_acc=0.3620, decision_f1=0.4788, final_task_acc=0.7720, avg_cost=27.88
+coqa_short: decision_acc=0.6460, decision_f1=0.0585, final_task_acc=0.4976, avg_cost=1.84
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
+
+
+Ratio = 40
+=== Dataset: cnli_short ===
+Loading data from ./neural_data\cnli_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.8165, R(route)=0.2629
+  s=1: R(keep)=-0.0100, R(route)=0.6000
+Computed threshold tau = 0.4758, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.5720
+  Decision F1 (positive=route where LLM better): 0.4716
+  Final task accuracy (chosen slm/llm score):   0.7290
+  Average cost (1 for SLM, 40 for LLM):         21.01
+Baselines:
+  Always SLM: acc=0.5810, avg_cost=1.00
+  Always LLM: acc=0.7630, avg_cost=40.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [6.5500307  2.33954004 1.62164903]
+    b' = -0.8893
+  Policy: route if p > 0.4758, otherwise keep.
+
+=== Dataset: coqa_short ===
+Loading data from ./neural_data\coqa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.5831, R(route)=0.0866
+  s=1: R(keep)=0.2872, R(route)=0.3958
+Computed threshold tau = 0.8205, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6520
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.4904
+  Average cost (1 for SLM, 40 for LLM):         1.04
+Baselines:
+  Always SLM: acc=0.4904, avg_cost=1.00
+  Always LLM: acc=0.5939, avg_cost=40.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-2.13381955 -0.0780217  -0.05408071]
+    b' = -0.3835
+  Policy: route if p > 0.8205, otherwise keep.
+
+=== Dataset: qasper_short ===
+Loading data from ./neural_data\qasper_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.4158, R(route)=-0.1070
+  s=1: R(keep)=0.2092, R(route)=0.1976
+Computed threshold tau = 1.0227, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6970
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.3632
+  Average cost (1 for SLM, 40 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.3632, avg_cost=1.00
+  Always LLM: acc=0.3853, avg_cost=40.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [3.77543969 0.9201241  0.63778323]
+    b' = -0.0831
+  Policy: route if p > 1.0227, otherwise keep.
+
+=== Dataset: narrative_qa_short ===
+Loading data from ./neural_data\narrative_qa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.2632, R(route)=-0.1939
+  s=1: R(keep)=0.1243, R(route)=0.1064
+Computed threshold tau = 1.0408, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.5700
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.2134
+  Average cost (1 for SLM, 40 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.2134, avg_cost=1.00
+  Always LLM: acc=0.3352, avg_cost=40.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-3.0745012  -0.4254494  -0.29489899]
+    b' = -0.3863
+  Policy: route if p > 1.0408, otherwise keep.
+
+=== Summary over datasets ===
+cnli_short: decision_acc=0.5720, decision_f1=0.4716, final_task_acc=0.7290, avg_cost=21.01
+coqa_short: decision_acc=0.6520, decision_f1=0.0000, final_task_acc=0.4904, avg_cost=1.04
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
+
+Ratio = 50
+=== Dataset: cnli_short ===
+Loading data from ./neural_data\cnli_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.8165, R(route)=0.1629
+  s=1: R(keep)=-0.0100, R(route)=0.5000
+Computed threshold tau = 0.5617, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6210
+  Decision F1 (positive=route where LLM better): 0.2808
+  Final task accuracy (chosen slm/llm score):   0.6390
+  Average cost (1 for SLM, 50 for LLM):         12.27
+Baselines:
+  Always SLM: acc=0.5810, avg_cost=1.00
+  Always LLM: acc=0.7630, avg_cost=50.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [6.5500307  2.33954004 1.62164903]
+    b' = -0.8893
+  Policy: route if p > 0.5617, otherwise keep.
+
+=== Dataset: coqa_short ===
+Loading data from ./neural_data\coqa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.5831, R(route)=-0.0134
+  s=1: R(keep)=0.2872, R(route)=0.2958
+Computed threshold tau = 0.9858, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6530
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.4904
+  Average cost (1 for SLM, 50 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.4904, avg_cost=1.00
+  Always LLM: acc=0.5939, avg_cost=50.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-2.13381955 -0.0780217  -0.05408071]
+    b' = -0.3835
+  Policy: route if p > 0.9858, otherwise keep.
+
+=== Dataset: qasper_short ===
+Loading data from ./neural_data\qasper_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.4158, R(route)=-0.2070
+  s=1: R(keep)=0.2092, R(route)=0.0976
+Computed threshold tau = 1.2183, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6970
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.3632
+  Average cost (1 for SLM, 50 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.3632, avg_cost=1.00
+  Always LLM: acc=0.3853, avg_cost=50.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [3.77543969 0.9201241  0.63778323]
+    b' = -0.0831
+  Policy: route if p > 1.2183, otherwise keep.
+
+=== Dataset: narrative_qa_short ===
+Loading data from ./neural_data\narrative_qa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.2632, R(route)=-0.2939
+  s=1: R(keep)=0.1243, R(route)=0.0064
+Computed threshold tau = 1.2686, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.5700
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.2134
+  Average cost (1 for SLM, 50 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.2134, avg_cost=1.00
+  Always LLM: acc=0.3352, avg_cost=50.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-3.0745012  -0.4254494  -0.29489899]
+    b' = -0.3863
+  Policy: route if p > 1.2686, otherwise keep.
+
+=== Summary over datasets ===
+cnli_short: decision_acc=0.6210, decision_f1=0.2808, final_task_acc=0.6390, avg_cost=12.27
+coqa_short: decision_acc=0.6530, decision_f1=0.0000, final_task_acc=0.4904, avg_cost=1.00
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
+
+
+Ratio = 60
+=== Dataset: cnli_short ===
+Loading data from ./neural_data\cnli_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.8165, R(route)=0.0629
+  s=1: R(keep)=-0.0100, R(route)=0.4000
+Computed threshold tau = 0.6476, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6800
+  Decision F1 (positive=route where LLM better): 0.0805
+  Final task accuracy (chosen slm/llm score):   0.5900
+  Average cost (1 for SLM, 60 for LLM):         4.01
+Baselines:
+  Always SLM: acc=0.5810, avg_cost=1.00
+  Always LLM: acc=0.7630, avg_cost=60.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [6.5500307  2.33954004 1.62164903]
+    b' = -0.8893
+  Policy: route if p > 0.6476, otherwise keep.
+
+=== Dataset: coqa_short ===
+Loading data from ./neural_data\coqa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.5831, R(route)=-0.1134
+  s=1: R(keep)=0.2872, R(route)=0.1958
+Computed threshold tau = 1.1511, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6530
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.4904
+  Average cost (1 for SLM, 60 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.4904, avg_cost=1.00
+  Always LLM: acc=0.5939, avg_cost=60.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-2.13381955 -0.0780217  -0.05408071]
+    b' = -0.3835
+  Policy: route if p > 1.1511, otherwise keep.
+
+=== Dataset: qasper_short ===
+Loading data from ./neural_data\qasper_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.4158, R(route)=-0.3070
+  s=1: R(keep)=0.2092, R(route)=-0.0024
+Computed threshold tau = 1.4139, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6970
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.3632
+  Average cost (1 for SLM, 60 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.3632, avg_cost=1.00
+  Always LLM: acc=0.3853, avg_cost=60.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [3.77543969 0.9201241  0.63778323]
+    b' = -0.0831
+  Policy: route if p > 1.4139, otherwise keep.
+
+=== Dataset: narrative_qa_short ===
+Loading data from ./neural_data\narrative_qa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.2632, R(route)=-0.3939
+  s=1: R(keep)=0.1243, R(route)=-0.0936
+Computed threshold tau = 1.4963, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.5700
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.2134
+  Average cost (1 for SLM, 60 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.2134, avg_cost=1.00
+  Always LLM: acc=0.3352, avg_cost=60.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-3.0745012  -0.4254494  -0.29489899]
+    b' = -0.3863
+  Policy: route if p > 1.4963, otherwise keep.
+
+=== Summary over datasets ===
+cnli_short: decision_acc=0.6800, decision_f1=0.0805, final_task_acc=0.5900, avg_cost=4.01
+coqa_short: decision_acc=0.6530, decision_f1=0.0000, final_task_acc=0.4904, avg_cost=1.00
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
+
+Ratio = 70
+=== Dataset: cnli_short ===
+Loading data from ./neural_data\cnli_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.8165, R(route)=-0.0371
+  s=1: R(keep)=-0.0100, R(route)=0.3000
+Computed threshold tau = 0.7336, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.7020
+  Decision F1 (positive=route where LLM better): 0.0132
+  Final task accuracy (chosen slm/llm score):   0.5830
+  Average cost (1 for SLM, 70 for LLM):         1.34
+Baselines:
+  Always SLM: acc=0.5810, avg_cost=1.00
+  Always LLM: acc=0.7630, avg_cost=70.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [6.5500307  2.33954004 1.62164903]
+    b' = -0.8893
+  Policy: route if p > 0.7336, otherwise keep.
+
+=== Dataset: coqa_short ===
+Loading data from ./neural_data\coqa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.5831, R(route)=-0.2134
+  s=1: R(keep)=0.2872, R(route)=0.0958
+Computed threshold tau = 1.3163, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6530
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.4904
+  Average cost (1 for SLM, 70 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.4904, avg_cost=1.00
+  Always LLM: acc=0.5939, avg_cost=70.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-2.13381955 -0.0780217  -0.05408071]
+    b' = -0.3835
+  Policy: route if p > 1.3163, otherwise keep.
+
+=== Dataset: qasper_short ===
+Loading data from ./neural_data\qasper_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.4158, R(route)=-0.4070
+  s=1: R(keep)=0.2092, R(route)=-0.1024
+Computed threshold tau = 1.6095, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6970
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.3632
+  Average cost (1 for SLM, 70 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.3632, avg_cost=1.00
+  Always LLM: acc=0.3853, avg_cost=70.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [3.77543969 0.9201241  0.63778323]
+    b' = -0.0831
+  Policy: route if p > 1.6095, otherwise keep.
+
+=== Dataset: narrative_qa_short ===
+Loading data from ./neural_data\narrative_qa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.2632, R(route)=-0.4939
+  s=1: R(keep)=0.1243, R(route)=-0.1936
+Computed threshold tau = 1.7240, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.5700
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.2134
+  Average cost (1 for SLM, 70 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.2134, avg_cost=1.00
+  Always LLM: acc=0.3352, avg_cost=70.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-3.0745012  -0.4254494  -0.29489899]
+    b' = -0.3863
+  Policy: route if p > 1.7240, otherwise keep.
+
+=== Summary over datasets ===
+cnli_short: decision_acc=0.7020, decision_f1=0.0132, final_task_acc=0.5830, avg_cost=1.34
+coqa_short: decision_acc=0.6530, decision_f1=0.0000, final_task_acc=0.4904, avg_cost=1.00
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
+
+Ratio = 80
+=== Dataset: cnli_short ===
+Loading data from ./neural_data\cnli_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.8165, R(route)=-0.1371
+  s=1: R(keep)=-0.0100, R(route)=0.2000
+Computed threshold tau = 0.8195, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.7030
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.5810
+  Average cost (1 for SLM, 80 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.5810, avg_cost=1.00
+  Always LLM: acc=0.7630, avg_cost=80.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [6.5500307  2.33954004 1.62164903]
+    b' = -0.8893
+  Policy: route if p > 0.8195, otherwise keep.
+
+=== Dataset: coqa_short ===
+Loading data from ./neural_data\coqa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.5831, R(route)=-0.3134
+  s=1: R(keep)=0.2872, R(route)=-0.0042
+Computed threshold tau = 1.4816, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6530
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.4904
+  Average cost (1 for SLM, 80 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.4904, avg_cost=1.00
+  Always LLM: acc=0.5939, avg_cost=80.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-2.13381955 -0.0780217  -0.05408071]
+    b' = -0.3835
+  Policy: route if p > 1.4816, otherwise keep.
+
+=== Dataset: qasper_short ===
+Loading data from ./neural_data\qasper_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.4158, R(route)=-0.5070
+  s=1: R(keep)=0.2092, R(route)=-0.2024
+Computed threshold tau = 1.8052, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6970
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.3632
+  Average cost (1 for SLM, 80 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.3632, avg_cost=1.00
+  Always LLM: acc=0.3853, avg_cost=80.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [3.77543969 0.9201241  0.63778323]
+    b' = -0.0831
+  Policy: route if p > 1.8052, otherwise keep.
+
+=== Dataset: narrative_qa_short ===
+Loading data from ./neural_data\narrative_qa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.2632, R(route)=-0.5939
+  s=1: R(keep)=0.1243, R(route)=-0.2936
+Computed threshold tau = 1.9518, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.5700
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.2134
+  Average cost (1 for SLM, 80 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.2134, avg_cost=1.00
+  Always LLM: acc=0.3352, avg_cost=80.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-3.0745012  -0.4254494  -0.29489899]
+    b' = -0.3863
+  Policy: route if p > 1.9518, otherwise keep.
+
+=== Summary over datasets ===
+cnli_short: decision_acc=0.7030, decision_f1=0.0000, final_task_acc=0.5810, avg_cost=1.00
+coqa_short: decision_acc=0.6530, decision_f1=0.0000, final_task_acc=0.4904, avg_cost=1.00
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
+
+Ratio = 90
+
+=== Dataset: cnli_short ===
+Loading data from ./neural_data\cnli_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.8165, R(route)=-0.2371
+  s=1: R(keep)=-0.0100, R(route)=0.1000
+Computed threshold tau = 0.9055, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.7030
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.5810
+  Average cost (1 for SLM, 90 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.5810, avg_cost=1.00
+  Always LLM: acc=0.7630, avg_cost=90.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [6.5500307  2.33954004 1.62164903]
+    b' = -0.8893
+  Policy: route if p > 0.9055, otherwise keep.
+
+=== Dataset: coqa_short ===
+Loading data from ./neural_data\coqa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.5831, R(route)=-0.4134
+  s=1: R(keep)=0.2872, R(route)=-0.1042
+Computed threshold tau = 1.6469, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6530
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.4904
+  Average cost (1 for SLM, 90 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.4904, avg_cost=1.00
+  Always LLM: acc=0.5939, avg_cost=90.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-2.13381955 -0.0780217  -0.05408071]
+    b' = -0.3835
+  Policy: route if p > 1.6469, otherwise keep.
+
+=== Dataset: qasper_short ===
+Loading data from ./neural_data\qasper_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.4158, R(route)=-0.6070
+  s=1: R(keep)=0.2092, R(route)=-0.3024
+Computed threshold tau = 2.0008, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6970
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.3632
+  Average cost (1 for SLM, 90 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.3632, avg_cost=1.00
+  Always LLM: acc=0.3853, avg_cost=90.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [3.77543969 0.9201241  0.63778323]
+    b' = -0.0831
+  Policy: route if p > 2.0008, otherwise keep.
+
+=== Dataset: narrative_qa_short ===
+Loading data from ./neural_data\narrative_qa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.2632, R(route)=-0.6939
+  s=1: R(keep)=0.1243, R(route)=-0.3936
+Computed threshold tau = 2.1795, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.5700
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.2134
+  Average cost (1 for SLM, 90 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.2134, avg_cost=1.00
+  Always LLM: acc=0.3352, avg_cost=90.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-3.0745012  -0.4254494  -0.29489899]
+    b' = -0.3863
+  Policy: route if p > 2.1795, otherwise keep.
+
+=== Summary over datasets ===
+cnli_short: decision_acc=0.7030, decision_f1=0.0000, final_task_acc=0.5810, avg_cost=1.00
+coqa_short: decision_acc=0.6530, decision_f1=0.0000, final_task_acc=0.4904, avg_cost=1.00
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
+
+
+Ratio = 100
+                        
+=== Dataset: cnli_short ===
+Loading data from ./neural_data\cnli_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.8165, R(route)=-0.3371
+  s=1: R(keep)=-0.0100, R(route)=0.0000
+Computed threshold tau = 0.9914, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.7030
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.5810
+  Average cost (1 for SLM, 100 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.5810, avg_cost=1.00
+  Always LLM: acc=0.7630, avg_cost=100.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [6.5500307  2.33954004 1.62164903]
+    b' = -0.8893
+  Policy: route if p > 0.9914, otherwise keep.
+
+=== Dataset: coqa_short ===
+Loading data from ./neural_data\coqa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.5831, R(route)=-0.5134
+  s=1: R(keep)=0.2872, R(route)=-0.2042
+Computed threshold tau = 1.8121, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6530
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.4904
+  Average cost (1 for SLM, 100 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.4904, avg_cost=1.00
+  Always LLM: acc=0.5939, avg_cost=100.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-2.13381955 -0.0780217  -0.05408071]
+    b' = -0.3835
+  Policy: route if p > 1.8121, otherwise keep.
+
+=== Dataset: qasper_short ===
+Loading data from ./neural_data\qasper_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.4158, R(route)=-0.7070
+  s=1: R(keep)=0.2092, R(route)=-0.4024
+Computed threshold tau = 2.1964, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.6970
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.3632
+  Average cost (1 for SLM, 100 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.3632, avg_cost=1.00
+  Always LLM: acc=0.3853, avg_cost=100.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [3.77543969 0.9201241  0.63778323]
+    b' = -0.0831
+  Policy: route if p > 2.1964, otherwise keep.
+
+=== Dataset: narrative_qa_short ===
+Loading data from ./neural_data\narrative_qa_short_neural.jsonl
+Number of examples: 1000
+Estimated rewards R(s,a):
+  s=0: R(keep)=0.2632, R(route)=-0.7939
+  s=1: R(keep)=0.1243, R(route)=-0.4936
+Computed threshold tau = 2.4073, compare with '>'
+Policy metrics on full dataset:
+  Decision accuracy (route vs keep vs label): 0.5700
+  Decision F1 (positive=route where LLM better): 0.0000
+  Final task accuracy (chosen slm/llm score):   0.2134
+  Average cost (1 for SLM, 100 for LLM):         1.00
+Baselines:
+  Always SLM: acc=0.2134, avg_cost=1.00
+  Always LLM: acc=0.3352, avg_cost=100.00
+
+Analytical policy:
+  Observation features o = (avg_logp, avg_entropy_nats, avg_entropy_bits)
+  Posterior p = sigma(w'^T o + b'), with:
+    w' = [-3.0745012  -0.4254494  -0.29489899]
+    b' = -0.3863
+  Policy: route if p > 2.4073, otherwise keep.
+
+=== Summary over datasets ===
+cnli_short: decision_acc=0.7030, decision_f1=0.0000, final_task_acc=0.5810, avg_cost=1.00
+coqa_short: decision_acc=0.6530, decision_f1=0.0000, final_task_acc=0.4904, avg_cost=1.00
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
