@@ -1,0 +1,149 @@
+{
+  "title": "POMDP Results for Self-Verification Model(AutoMix)",
+  "tables": [
+    {
+      "id": "self_ver_pomdp_cnli",
+      "dataset": "CNLI",
+      "columns": [
+        "Policy",
+        "Accuracy",
+        "Average Cost",
+        "Delta_{IBC}"
+      ],
+      "rows": [
+        {
+          "policy": "C_L=40,
+          "accuracy": 0.579,
+          "average_cost": 5.0,
+          "delta_ibc": "-infty"
+        },
+        {
+          "policy": "C_L=30,
+          "accuracy": 0.579,
+          "average_cost": 5.0,
+          "delta_ibc": "-infty"
+        },
+        {
+          "policy": "C_L=20,
+          "accuracy": 0.579,
+          "average_cost": 5.0,
+          "delta_ibc": "-infty"
+        },
+        {
+          "policy": "C_L=10,
+          "accuracy": 0.736,
+          "average_cost": 18.32,
+          "delta_ibc": 0.2812
+        }
+      ]
+    },
+    {
+      "id": "self_ver_pomdp_coqa",
+      "dataset": "CoQA",
+      "columns": [
+        "Policy",
+        "F1",
+        "Average Cost",
+        "Delta_{IBC}"
+      ],
+      "rows": [
+        {
+          "policy": "C_L=40,
+          "f1": 0.462,
+          "average_cost": 5.0,
+          "delta_ibc": "-infty"
+        },
+        {
+          "policy": "C_L=30,
+          "f1": 0.462,
+          "average_cost": 5.0,
+          "delta_ibc": "-infty"
+        },
+        {
+          "policy": "C_L=20,
+          "f1": 0.465,
+          "average_cost": 5.5,
+          "delta_ibc": -0.1707
+        },
+        {
+          "policy": "C_L=10,
+          "f1": 0.526,
+          "average_cost": 11.64,
+          "delta_ibc": 0.4485
+        }
+      ]
+    },
+    {
+      "id": "self_ver_pomdp_narrativeqa",
+      "dataset": "Narrative_QA",
+      "columns": [
+        "Policy",
+        "F1",
+        "Average Cost",
+        "Delta_{IBC}"
+      ],
+      "rows": [
+        {
+          "policy": "C_L=40,
+          "f1": 0.209,
+          "average_cost": 5.84,
+          "delta_ibc": -0.2755
+        },
+        {
+          "policy": "C_L=30,
+          "f1": 0.209,
+          "average_cost": 5.84,
+          "delta_ibc": -27.5596
+        },
+        {
+          "policy": "C_L=20,
+          "f1": 0.2163,
+          "average_cost": 6.76,
+          "delta_ibc": -12.6697
+        },
+        {
+          "policy": "C_L=10,
+          "f1": 0.2802,
+          "average_cost": 16.08,
+          "delta_ibc": -14.6887
+        }
+      ]
+    },
+    {
+      "id": "self_ver_pomdp_qasper",
+      "dataset": "QASPER",
+      "columns": [
+        "Policy",
+        "F1",
+        "Average Cost",
+        "Delta_{IBC}"
+      ],
+      "rows": [
+        {
+          "policy": "C_L=40,
+          "f1": 0.3059,
+          "average_cost": 5.32,
+          "delta_ibc": 47.5593
+        },
+        {
+          "policy": "C_L=30,
+          "f1": 0.3059,
+          "average_cost": 5.32,
+          "delta_ibc": 47.5593
+        },
+        {
+          "policy": "C_L=20,
+          "f1": 0.3059,
+          "average_cost": 5.32,
+          "delta_ibc": 47.5593
+        },
+        {
+          "policy": "C_L=10,
+          "f1": 0.3059,
+          "average_cost": 5.32,
+          "delta_ibc": 47.5593
+        }
+      ]
+    }
+  ]
+}
