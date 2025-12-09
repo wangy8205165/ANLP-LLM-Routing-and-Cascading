@@ -1,0 +1,69 @@
+Ratio = 10
+=== Summary over datasets ===
+cnli_short: decision_acc=0.2970, decision_f1=0.4580, final_task_acc=0.7630, avg_cost=10.00
+coqa_short: decision_acc=0.3470, decision_f1=0.5152, final_task_acc=0.5939, avg_cost=10.00
+qasper_short: decision_acc=0.3360, decision_f1=0.4747, final_task_acc=0.3918, avg_cost=9.65
+narrative_qa_short: decision_acc=0.4300, decision_f1=0.6014, final_task_acc=0.3352, avg_cost=10.00
+
+Ratio = 20
+=== Summary over datasets ===
+cnli_short: decision_acc=0.2970, decision_f1=0.4580, final_task_acc=0.7630, avg_cost=20.00
+coqa_short: decision_acc=0.5710, decision_f1=0.4723, final_task_acc=0.5666, avg_cost=9.85
+qasper_short: decision_acc=0.6980, decision_f1=0.0066, final_task_acc=0.3634, avg_cost=1.02
+narrative_qa_short: decision_acc=0.5550, decision_f1=0.1620, final_task_acc=0.2248, avg_cost=2.92
+
+Ratio = 30
+=== Summary over datasets ===
+cnli_short: decision_acc=0.3620, decision_f1=0.4788, final_task_acc=0.7720, avg_cost=27.88
+coqa_short: decision_acc=0.6460, decision_f1=0.0585, final_task_acc=0.4976, avg_cost=1.84
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
+
+Ratio = 40
+=== Summary over datasets ===
+cnli_short: decision_acc=0.5720, decision_f1=0.4716, final_task_acc=0.7290, avg_cost=21.01
+coqa_short: decision_acc=0.6520, decision_f1=0.0000, final_task_acc=0.4904, avg_cost=1.04
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
+
+Ratio = 50
+=== Summary over datasets ===
+cnli_short: decision_acc=0.6210, decision_f1=0.2808, final_task_acc=0.6390, avg_cost=12.27
+coqa_short: decision_acc=0.6530, decision_f1=0.0000, final_task_acc=0.4904, avg_cost=1.00
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
+
+Ratio = 60
+=== Summary over datasets ===
+cnli_short: decision_acc=0.6800, decision_f1=0.0805, final_task_acc=0.5900, avg_cost=4.01
+coqa_short: decision_acc=0.6530, decision_f1=0.0000, final_task_acc=0.4904, avg_cost=1.00
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
+
+Ratio = 70
+=== Summary over datasets ===
+cnli_short: decision_acc=0.7020, decision_f1=0.0132, final_task_acc=0.5830, avg_cost=1.34
+coqa_short: decision_acc=0.6530, decision_f1=0.0000, final_task_acc=0.4904, avg_cost=1.00
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
+
+Ratio = 80
+=== Summary over datasets ===
+cnli_short: decision_acc=0.7030, decision_f1=0.0000, final_task_acc=0.5810, avg_cost=1.00
+coqa_short: decision_acc=0.6530, decision_f1=0.0000, final_task_acc=0.4904, avg_cost=1.00
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
+
+Ratio = 90
+=== Summary over datasets ===
+cnli_short: decision_acc=0.7030, decision_f1=0.0000, final_task_acc=0.5810, avg_cost=1.00
+coqa_short: decision_acc=0.6530, decision_f1=0.0000, final_task_acc=0.4904, avg_cost=1.00
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
+
+Ratio = 100
+=== Summary over datasets ===
+cnli_short: decision_acc=0.7030, decision_f1=0.0000, final_task_acc=0.5810, avg_cost=1.00
+coqa_short: decision_acc=0.6530, decision_f1=0.0000, final_task_acc=0.4904, avg_cost=1.00
+qasper_short: decision_acc=0.6970, decision_f1=0.0000, final_task_acc=0.3632, avg_cost=1.00
+narrative_qa_short: decision_acc=0.5700, decision_f1=0.0000, final_task_acc=0.2134, avg_cost=1.00
