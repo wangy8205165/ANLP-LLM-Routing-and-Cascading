@@ -1,0 +1,290 @@
+{
+  "results": {
+    "Policy": {
+      "10": {},
+      "20": {},
+      "30": {},
+      "40": {},
+      "50": {},
+      "60": {},
+      "70": {},
+      "80": {},
+      "90": {},
+      "100": {}
+    },
+    "cnli_short": {
+      "10": {
+        "decision_acc": 0.297,
+        "decision_f1": 0.458,
+        "final_task_acc": 0.763,
+        "avg_cost": 10.0
+      },
+      "20": {
+        "decision_acc": 0.297,
+        "decision_f1": 0.458,
+        "final_task_acc": 0.763,
+        "avg_cost": 20.0
+      },
+      "30": {
+        "decision_acc": 0.362,
+        "decision_f1": 0.4788,
+        "final_task_acc": 0.772,
+        "avg_cost": 27.88
+      },
+      "40": {
+        "decision_acc": 0.572,
+        "decision_f1": 0.4716,
+        "final_task_acc": 0.729,
+        "avg_cost": 21.01
+      },
+      "50": {
+        "decision_acc": 0.621,
+        "decision_f1": 0.2808,
+        "final_task_acc": 0.639,
+        "avg_cost": 12.27
+      },
+      "60": {
+        "decision_acc": 0.68,
+        "decision_f1": 0.0805,
+        "final_task_acc": 0.59,
+        "avg_cost": 4.01
+      },
+      "70": {
+        "decision_acc": 0.702,
+        "decision_f1": 0.0132,
+        "final_task_acc": 0.583,
+        "avg_cost": 1.34
+      },
+      "80": {
+        "decision_acc": 0.703,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.581,
+        "avg_cost": 1.0
+      },
+      "90": {
+        "decision_acc": 0.703,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.581,
+        "avg_cost": 1.0
+      },
+      "100": {
+        "decision_acc": 0.703,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.581,
+        "avg_cost": 1.0
+      }
+    },
+    "coqa_short": {
+      "10": {
+        "decision_acc": 0.347,
+        "decision_f1": 0.5152,
+        "final_task_acc": 0.5939,
+        "avg_cost": 10.0
+      },
+      "20": {
+        "decision_acc": 0.571,
+        "decision_f1": 0.4723,
+        "final_task_acc": 0.5666,
+        "avg_cost": 9.85
+      },
+      "30": {
+        "decision_acc": 0.646,
+        "decision_f1": 0.0585,
+        "final_task_acc": 0.4976,
+        "avg_cost": 1.84
+      },
+      "40": {
+        "decision_acc": 0.652,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.4904,
+        "avg_cost": 1.04
+      },
+      "50": {
+        "decision_acc": 0.653,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.4904,
+        "avg_cost": 1.0
+      },
+      "60": {
+        "decision_acc": 0.653,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.4904,
+        "avg_cost": 1.0
+      },
+      "70": {
+        "decision_acc": 0.653,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.4904,
+        "avg_cost": 1.0
+      },
+      "80": {
+        "decision_acc": 0.653,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.4904,
+        "avg_cost": 1.0
+      },
+      "90": {
+        "decision_acc": 0.653,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.4904,
+        "avg_cost": 1.0
+      },
+      "100": {
+        "decision_acc": 0.653,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.4904,
+        "avg_cost": 1.0
+      }
+    },
+    "qasper_short": {
+      "10": {
+        "decision_acc": 0.336,
+        "decision_f1": 0.4747,
+        "final_task_acc": 0.3918,
+        "avg_cost": 9.65
+      },
+      "20": {
+        "decision_acc": 0.698,
+        "decision_f1": 0.0066,
+        "final_task_acc": 0.3634,
+        "avg_cost": 1.02
+      },
+      "30": {
+        "decision_acc": 0.697,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.3632,
+        "avg_cost": 1.0
+      },
+      "40": {
+        "decision_acc": 0.697,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.3632,
+        "avg_cost": 1.0
+      },
+      "50": {
+        "decision_acc": 0.697,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.3632,
+        "avg_cost": 1.0
+      },
+      "60": {
+        "decision_acc": 0.697,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.3632,
+        "avg_cost": 1.0
+      },
+      "70": {
+        "decision_acc": 0.697,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.3632,
+        "avg_cost": 1.0
+      },
+      "80": {
+        "decision_acc": 0.697,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.3632,
+        "avg_cost": 1.0
+      },
+      "90": {
+        "decision_acc": 0.697,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.3632,
+        "avg_cost": 1.0
+      },
+      "100": {
+        "decision_acc": 0.697,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.3632,
+        "avg_cost": 1.0
+      }
+    },
+    "narrative_qa_short": {
+      "10": {
+        "decision_acc": 0.43,
+        "decision_f1": 0.6014,
+        "final_task_acc": 0.3352,
+        "avg_cost": 10.0
+      },
+      "20": {
+        "decision_acc": 0.555,
+        "decision_f1": 0.162,
+        "final_task_acc": 0.2248,
+        "avg_cost": 2.92
+      },
+      "30": {
+        "decision_acc": 0.57,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.2134,
+        "avg_cost": 1.0
+      },
+      "40": {
+        "decision_acc": 0.57,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.2134,
+        "avg_cost": 1.0
+      },
+      "50": {
+        "decision_acc": 0.57,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.2134,
+        "avg_cost": 1.0
+      },
+      "60": {
+        "decision_acc": 0.57,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.2134,
+        "avg_cost": 1.0
+      },
+      "70": {
+        "decision_acc": 0.57,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.2134,
+        "avg_cost": 1.0
+      },
+      "80": {
+        "decision_acc": 0.57,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.2134,
+        "avg_cost": 1.0
+      },
+      "90": {
+        "decision_acc": 0.57,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.2134,
+        "avg_cost": 1.0
+      },
+      "100": {
+        "decision_acc": 0.57,
+        "decision_f1": 0.0,
+        "final_task_acc": 0.2134,
+        "avg_cost": 1.0
+      }
+    }
+  },
+  "baselines": {
+    "cnli_short": {
+      "p_slm": 0.581,
+      "c_slm_base": 1.0,
+      "p_llm": 0.763,
+      "c_llm_base": 10.0
+    },
+    "coqa_short": {
+      "p_slm": 0.4904,
+      "c_slm_base": 1.0,
+      "p_llm": 0.5939,
+      "c_llm_base": 10.0
+    },
+    "qasper_short": {
+      "p_slm": 0.3632,
+      "c_slm_base": 1.0,
+      "p_llm": 0.3853,
+      "c_llm_base": 10.0
+    },
+    "narrative_qa_short": {
+      "p_slm": 0.2134,
+      "c_slm_base": 1.0,
+      "p_llm": 0.3352,
+      "c_llm_base": 10.0
+    }
+  }
+}
